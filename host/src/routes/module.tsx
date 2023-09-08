@@ -23,13 +23,13 @@ const moduleRoutes: RoutesType[] = [
   },
   {
     path: 'cli/*',
-    name: i18n.t("host.menu.cli"),
+    name: i18n.t("host.menu.template"),
     icon: <HomeOutlined />,
     element: <Outlet />,
     children: [
       {
-        path: "reactAntdWebpack/*",
-        name: i18n.t("host.menu.reactApp"),
+        path: "reactWebpack/*",
+        name: i18n.t("host.menu.reactWebpack"),
         icon: <HomeOutlined />,
         element: <MicroApp {...getConfig('reactAntdWebpack')}/>
       },

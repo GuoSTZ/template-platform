@@ -9,7 +9,8 @@
   },
   "workspaces": {
     "packages": [
-      "host"
+      "host",
+      "reactWebpack"
     ]
   },
   "private": true,

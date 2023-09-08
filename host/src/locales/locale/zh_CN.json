@@ -17,11 +17,8 @@
         "F": "模块F",
         "G": "模块G"
       },
-      "cli": "脚手架",
-      "reactApp": "react18应用",
-      "vueApp": "vue3应用",
-      "umiApp": "umi应用",
-      "game": "休闲"
+      "template": "模板",
+      "reactWebpack": "react应用"
     }
   }
 }

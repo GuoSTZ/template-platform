@@ -17,10 +17,8 @@
         "F": "Module F",
         "G": "Module G"
       },
-      "reactApp": "react18 App",
-      "vueApp": "vue3 App",
-      "umiApp": "umi App",
-      "game": "Game"
+      "template": "Template",
+      "reactWebpack": "react Webpack"
     }
   }
 }

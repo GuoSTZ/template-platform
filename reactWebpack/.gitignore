@@ -1,0 +1,12 @@
+yarn.lock
+yarn-error.log
+package-lock.json
+dist
+lib
+node_modules
+.vscode
+.doc
+.cache
+build/
+
+
