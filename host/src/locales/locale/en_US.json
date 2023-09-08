@@ -1,0 +1,26 @@
+{
+  "host": {
+    "HEADER": "HOST",
+    "menu": {
+      "demo": "Demo",
+      "homePage": "HomePage",
+      "one": "Menu One",
+      "two": "Menu Two",
+      "three": "Menu Three",
+      "threeOne": "Menu Three One",
+      "modules": {
+        "A": "Module A",
+        "B": "Module B",
+        "C": "Module C",
+        "D": "Module D",
+        "E": "Module E",
+        "F": "Module F",
+        "G": "Module G"
+      },
+      "reactApp": "react18 App",
+      "vueApp": "vue3 App",
+      "umiApp": "umi App",
+      "game": "Game"
+    }
+  }
+}

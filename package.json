@@ -1,0 +1,23 @@
+{
+  "name": "template-platform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "pnpm --filter '*' run start",
+    "build": "pnpm --filter '*' run build",
+    "clean": "pnpm --filter '*' run clean && rm -rf node_modules"
+  },
+  "workspaces": {
+    "packages": [
+      "host"
+    ]
+  },
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "author": "guosheng",
+  "license": "ISC",
+  "devDependencies": {}
+}
