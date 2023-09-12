@@ -4,6 +4,8 @@ import jsxCustomEvent from '@micro-zoe/micro-app/polyfill/jsx-custom-event'
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import moduleRoutes from '@/routes/module';
+import MenuButton from '../MenuButton';
+import { AppstoreOutlined, DownloadOutlined, TrophyOutlined } from '@ant-design/icons'
 import './index.less';
 
 export interface MicroAppProps {
@@ -48,7 +50,7 @@ export default function MicroApp(props: MicroAppProps) {
   }, [name, location.pathname])
 
   return (
-    <React.Fragment>
+    <div style={{ position: 'relative' }}>
       <micro-app
         {...resetProps}
         data={data}
@@ -57,6 +59,14 @@ export default function MicroApp(props: MicroAppProps) {
         baseroute={NAME_SPACE}
       />
       <Outlet />
-    </React.Fragment>
+      <MenuButton 
+        items={[
+          {icon: <DownloadOutlined />}, 
+          {icon: <TrophyOutlined />}
+        ]} 
+        style={{ right: 40 }}
+        icon={<AppstoreOutlined />}
+      />
+    </div>
   )
 }
