@@ -26,8 +26,8 @@ const MenuButton = (props: MenuButtonProps) => {
       open={open}
       onClick={groupOnClick}
     >
-      {items.map(item => (
-        <FloatButton {...item} />
+      {items.map((item, idx: number) => (
+        <FloatButton key={idx} {...item} />
       ))}
     </FloatButton.Group>
   )

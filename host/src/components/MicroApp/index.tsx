@@ -1,11 +1,12 @@
 /** @jsxRuntime classic */
 /** @jsx jsxCustomEvent */
+import { AppstoreOutlined, DownloadOutlined, TrophyOutlined } from '@ant-design/icons'
 import jsxCustomEvent from '@micro-zoe/micro-app/polyfill/jsx-custom-event'
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import moduleRoutes from '@/routes/module';
 import MenuButton from '../MenuButton';
-import { AppstoreOutlined, DownloadOutlined, TrophyOutlined } from '@ant-design/icons'
+import TemplateDrawer from './TemplateDrawer';
 import './index.less';
 
 export interface MicroAppProps {
@@ -17,6 +18,7 @@ export interface MicroAppProps {
 export default function MicroApp(props: MicroAppProps) {
   const { name, url, ...resetProps } = props;
   const location = useLocation();
+  const [open, setOpen] = useState(false);
 
   const getPaths = (routes, name) => {
     const path = [''];
@@ -61,12 +63,15 @@ export default function MicroApp(props: MicroAppProps) {
       <Outlet />
       <MenuButton 
         items={[
-          {icon: <DownloadOutlined />}, 
-          {icon: <TrophyOutlined />}
+          {icon: <DownloadOutlined />, onClick: () => setOpen(true)},
+          {icon: <TrophyOutlined />},
         ]} 
         style={{ right: 40 }}
         icon={<AppstoreOutlined />}
       />
+      <TemplateDrawer 
+        open={open} 
+        onClose={() => setOpen(false)} />
     </div>
   )
 }

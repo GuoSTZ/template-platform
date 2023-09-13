@@ -31,7 +31,7 @@ const moduleRoutes: RoutesType[] = [
         path: "reactWebpack/*",
         name: i18n.t("host.menu.reactWebpack"),
         icon: <HomeOutlined />,
-        element: <MicroApp {...getConfig('reactAntdWebpack')}/>
+        element: <MicroApp {...getConfig('reactWebpack')}/>
       },
     ]
   },
